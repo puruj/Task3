@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<title>Task #3</title>
+		<link rel="stylesheet" href="main.css">
+
+		<!-- Required dependencies -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.1/pixi.js"></script>
+		<script src="/dist/pixi-particles.js"></script>
+
+		<!-- Example scaffolding -->
+		<script src="/examples/js/ParticleExample.js"></script>
+
+	</head>
+	<body>
+		<div id="framerate"></div>
+		<div id="instructions">Click Anywhere</div>
+		<canvas id="stage" width="400" height="400"></canvas>
+		<script>
+
+			// See js/ParticleExample.js for actual setup
+			new ParticleExample(
+				// The image to use
+				["/examples/images/particle.png", "/examples/images/Fire.png"],
+
+				// Emitter configuration, edit this to change the look
+				// of the emitter
+				{
+					"alpha": {
+						"start": 0.9,
+						"end": 0
+					},
+					"scale": {
+						"start": 0.25,
+						"end": 0.6
+					},
+					"color": {
+						"start": "e6f952",
+						"end": "ff4500"
+					},
+					"speed": {
+						"start": 500,
+						"end": 500
+					},
+					"startRotation": {
+						"min": 265,
+						"max": 275
+					},
+					"rotationSpeed": {
+						"min": 50,
+						"max": 50
+					},
+					"lifetime": {
+						"min": 0.1,
+						"max": 1
+					},
+					"blendMode": "normal",
+					"frequency": 0.001,
+					"spawnChance": 0.05,
+					"emitterLifetime": 0,
+					"maxParticles": 10,
+					"pos": {
+						"x": 0,
+						"y": 0
+					},
+					"addAtBack": false,
+					"spawnType": "circle",
+					"spawnCircle": {
+						"x": 0,
+						"y": 0,
+						"r": 10
+					}
+				});
+		</script>
+	</body>
+</html>
